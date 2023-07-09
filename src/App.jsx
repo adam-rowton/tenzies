@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 
 
 
-//what branch am I even on? 
 
 const apple = true
 export default function App() {
