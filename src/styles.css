@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+}
+
+main {
+    background-color: #F5F5F5;
+    height: 90vh;
+    max-width: 100vw;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20%;
+}
+
+.die-containter {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 15px;
+}
+
+.dice {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 3px 5px gray;
+    
+}
+
+.rollBtn {
+    padding: 10px 40px;
+    background-color: #5035FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.25em;
+}
+
+.held {
+    background-color: #59E391;
+}
