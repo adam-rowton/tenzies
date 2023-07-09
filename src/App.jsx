@@ -13,24 +13,35 @@ export default function App() {
 
   const [diceArray, setCurrentDie ] = useState(newDice)
   const [tenzies, setTenzies] = useState(false)
-  // const [firstSelected, setFirstSelected] =useState(diceArray.find((el) => !el.isHeld).value)
+  // const [firstSelected, setFirstSelected] =useState(diceArray.find((el) => el.isHeld))
 
 
 
 
   // useEffect(() => {
-  //    setFirstSelected(diceArray.find((el) => el.isHeld))
-  //    console.log(firstSelected)
-  // },[setCurrentDie])
+  //   if(firstSelected) {
+  //     console.log(firstSelected.value)
+  //   }
+  // },[holdDice])
 
   useEffect(() => {
     
-    // const firstSelected = diceArray.find((el) => el.isHeld)
-   
+    const firstSelected = diceArray.find((el) => el.isHeld)
+ 
 
     const allHeld = diceArray.every((el) => el.isHeld )
-    // const allSameValues = diceArray.every((el) => el.value === firstSelected)
-    allHeld && allSameValues ?  console.log("you won")  : console.log("not all held")
+    console.log(allHeld)
+    console.log(firstSelected)
+
+    if (firstSelected){
+      const allSameValues = diceArray.every((el) => el.value === firstSelected.value)
+      console.log(allSameValues)
+      allHeld && allSameValues ?  console.log("you won")  : console.log("not all held")
+    }
+      
+
+
+
   }, [diceArray])
 
  function holdDice(id){
