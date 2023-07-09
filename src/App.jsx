@@ -30,12 +30,10 @@ export default function App() {
  
 
     const allHeld = diceArray.every((el) => el.isHeld )
-    console.log(allHeld)
-    console.log(firstSelected)
-
+    
     if (firstSelected){
       const allSameValues = diceArray.every((el) => el.value === firstSelected.value)
-      console.log(allSameValues)
+      
       allHeld && allSameValues ?  console.log("you won")  : console.log("not all held")
     }
       
