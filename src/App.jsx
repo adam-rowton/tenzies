@@ -4,8 +4,7 @@ import Die from "./Die"
 import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
 
-
-
+//changes
 
 
 export default function App() {
